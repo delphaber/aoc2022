@@ -1,21 +1,19 @@
-# AOC
+# AOC 2022
 
-**TODO: Add description**
+My solutions for [Advent of Code 2022](https://adventofcode.com/2022) in Elixir.
 
-## Installation
+I don't think I'm gonna complete more than 3 days though. But it's OK, I'm just learning Elixir!
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `aoc22` to your list of dependencies in `mix.exs`:
+## Example
 
-```elixir
-def deps do
-  [
-    {:aoc22, "~> 0.1.0"}
-  ]
-end
+```bash
+iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/aoc22>.
-
+```elixir
+AOC.InputData.read("01") |> AOC.Day01.Part1.solve()
+AOC.InputData.read("01") |> AOC.Day01.Part2.solve()
+AOC.InputData.read("02") |> AOC.Day02.Part1.solve()
+AOC.InputData.read("02") |> AOC.Day02.Part2.solve()
+...
+```
