@@ -90,7 +90,6 @@ defmodule AOC.Day02.Part2 do
 
   def parse_data(data) do
     data
-    |> String.trim()
     |> String.split("\n")
   end
 end
