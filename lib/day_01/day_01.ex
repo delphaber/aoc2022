@@ -10,7 +10,6 @@ defmodule AOC.Day01.Part1 do
 
   def parse_data(data) do
     data
-    |> String.split("\n")
     |> Enum.chunk_by(fn x -> x == "" end)
     |> Enum.reject(fn x -> x == [""] end)
     |> Enum.map(fn x -> x |> Enum.map(&String.to_integer/1) end)
@@ -29,7 +28,6 @@ defmodule AOC.Day01.Part2 do
 
   def parse_data(data) do
     data
-    |> String.split("\n")
     |> Enum.chunk_by(fn x -> x == "" end)
     |> Enum.reject(fn x -> x == [""] end)
     |> Enum.map(fn x -> x |> Enum.map(&String.to_integer/1) end)

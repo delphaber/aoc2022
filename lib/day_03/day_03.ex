@@ -3,18 +3,11 @@ require IEx
 defmodule AOC.Day03.Part1 do
   def solve(data) do
     data
-    |> parse_data
     |> Enum.map(&split_rucksack/1)
     |> Enum.map(&find_common_items/1)
     |> Enum.map(&List.first/1)
     |> Enum.map(&calculate_priority/1)
     |> Enum.sum()
-  end
-
-  @spec parse_data(binary) :: [binary]
-  def parse_data(data) do
-    data
-    |> String.split("\n")
   end
 
   def split_rucksack(rucksack) do
@@ -42,17 +35,10 @@ end
 defmodule AOC.Day03.Part2 do
   def solve(data) do
     data
-    |> parse_data
     |> Enum.chunk_every(3)
     |> Enum.map(&find_badge/1)
     |> Enum.map(&calculate_priority/1)
     |> Enum.sum()
-  end
-
-  @spec parse_data(binary) :: [binary]
-  def parse_data(data) do
-    data
-    |> String.split("\n")
   end
 
   def find_badge(rucksacks) do

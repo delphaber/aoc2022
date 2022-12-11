@@ -3,7 +3,6 @@ require IEx
 defmodule AOC.Day02.Part1 do
   def solve(data) do
     data
-    |> parse_data
     |> Enum.map(fn x ->
       [opponent_choice, my_choice] = String.split(x)
       total_round_score(opponent_choice, my_choice)
@@ -32,18 +31,11 @@ defmodule AOC.Day02.Part1 do
   def round_score("C", "X"), do: 6
   def round_score("C", "Y"), do: 0
   def round_score("C", "Z"), do: 3
-
-  def parse_data(data) do
-    data
-    |> String.trim()
-    |> String.split("\n")
-  end
 end
 
 defmodule AOC.Day02.Part2 do
   def solve(data) do
     data
-    |> parse_data
     |> Enum.map(fn x ->
       [opponent_choice, my_choice] = String.split(x)
       total_round_score(opponent_choice, my_choice)
@@ -87,9 +79,4 @@ defmodule AOC.Day02.Part2 do
   def round_score("C", "A"), do: 6
   def round_score("C", "B"), do: 0
   def round_score("C", "C"), do: 3
-
-  def parse_data(data) do
-    data
-    |> String.split("\n")
-  end
 end
